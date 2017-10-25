@@ -1,0 +1,14 @@
+{
+  "name": "gdrive-crypt",
+  "description": "Simple extension to de/encrypt google drive documents on-the-fly..",
+  "version": "1.0",
+  "permissions": ["webRequest", "webRequestBlocking", "https://docs.google.com/document/d/*"],
+  "background": { "scripts": ["background.js"] },
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/document/d/*"],
+      "js": ["jquery.js", "content.js"]
+    }
+  ],
+  "manifest_version": 2
+}
